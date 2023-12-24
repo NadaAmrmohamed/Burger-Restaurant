@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #mm{
+
+        }
+    </style>
+    <script>
+       var items=[];
+        function addtocart(item){
+          //  console.log('add to cart :' ,item);
+          items.push(item);
+        }
+      function print(){
+        console.log('add to cart :' ,items[0]);
+        console.log('add to cart :' ,items[1]);
+      }
+     function gotocart(){
+         // console.log("abc");
+                     sessionStorage.setItem("array",JSON.stringify(items));
+                     window.location.href="cart.html";
+     }    
+      
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurant</title>
+    <style>
+        
+
+       
+
+
+
+        body{
+            background-color: rgb(245 245 245);
+        
+        }
+        .img{
+            width: 100px;
+            height: 100px;
+            margin-left:430px;
+        }
+        .head{
+            margin-left: 550px;
+    
+        
+        }
+        .w{
+            
+            display:inline-flex;
+            
+        }
+        .imges{
+            display: inline-block;
+            text-align: center;
+            margin-top: 30px;
+         margin-left: 230px;
+        }
+        .p{
+            display: inline-block;
+            margin-left: 50px;
+            margin-right: 35px;
+            margin-top: 10px;
+        }
+        .add:hover{
+            background-color: rgb(177, 173, 173);
+        }
+        .h1{
+            margin-left: 40px;
+        }
+        .h1:hover{
+           color: red;
+        }
+        .head:hover{
+            color: blue;
+        }
+
+
+.Cart{
+    border: 1px solid #700;
+    padding:15px;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.5s;
+    font-size: 20px;
+}
+
+       
+
+
+
+
+            </style>
+            
+
+</head>
+<body background="C:\xampp\htdocs\Nadaa/100.jpg">
+    <img src="C:\xampp\htdocs\Nadaa/55.png" width="200px" height="200px">
+     <a href="tel:+0205555558">contact us via phone number</a>
+    <div class="w">    
+        
+    <h1 class="head">Burger kitchen</h1>
+   
+
+    
+    <ul>
+        
+        <li><button class="Cart" onclick="gotocart()">cart</button></li>
+        
+    </ul>
+</nav>
+</div>
+<h1 class="h1">Our restaurant offers everything new and delicious taste.we have chicken and beef, Come and try everything new from us only</h1>
+<div class="imges">
+    <img  src="C:\xampp\htdocs\Nadaa/1.jpg" width="390px" height="360px">
+    <br>
+    <p class="p">Grilled chicken with egg sandwich 80LE</p>
+    <br>
+    <button class="add" onclick="addtocart('Grilled chicken with egg sandwich 80LE')">ADD TO CART</button>
+</div>
+<div class="imges">
+    <img  src="C:\xampp\htdocs\Nadaa/2.jpg" width="390px" height="360px">
+    <br>
+    <p class="p">Burger sandwich with vegetables 90LE</p>
+    <br>
+    <button class="add" onclick="addtocart('Burger sandwich with vegetables 90LE')" >ADD TO CART</button>
+</div>
+<br>
+<br>
+<div class="imges">
+    <img  src="C:\xampp\htdocs\Nadaa/3.jpg" width="390px" height="360px">
+    <br>
+    <p class="p">Crispy chicken sandwich 60LE</p>
+    <br>
+    <button class="add" onclick="addtocart('Crispy chicken sandwich 60LE')">ADD TO CART</button>
+</div>
+<div class="imges">
+    <img  src="C:\xampp\htdocs\Nadaa/4.jpg" width="390px" height="360px">
+    <br>
+    <p class="p">Spicy crispy chicken sandwich 65LE</p>
+    <br>
+    <button class="add" onclick="addtocart('Spicy crispy chicken sandwich 65LE')">ADD TO CART</button>
+</div>
+<br>
+<br>
+<div class="imges">
+    <img  src="C:\xampp\htdocs\Nadaa/5.jpg" width="390px" height="360px">
+    <br>
+    <p class="p">Burger sandwich with fries 100LE</p>
+    <br>
+    <button class="add" onclick="addtocart('Burger sandwich with fries 100LE')" >ADD TO CART</button>
+</div>
+<div class="imges">
+    <img  src="C:\xampp\htdocs\Nadaa/6.jpg" width="390px" height="360px">
+    <br>
+    <p class="p">chicken turkey sandwich with fries 90LE </p>
+    <br>
+    <button class="add" onclick="addtocart('chicken turkey sandwich with fries 90LE')">ADD TO CART</button>
+</div>
+<br>
+<br>
+<div class="imges">
+   
+   <img src="C:\xampp\htdocs\Nadaa/7.jpg" width="390px" height="360px">
+    <br>
+    <p class="p">chicken cheesee sandwich 90LE</p>
+    <br>
+    <button class="add" onclick="addtocart('chicken cheesee sandwich 90LE')">ADD TO CART</button>
+</div>
+<div class="imges">
+    <img  src="C:\xampp\htdocs\Nadaa/8.jpg" width="390px" height="360px">
+    <br>
+    <p class="p">Grilled chicken sandwich 70LE</p>
+    <br>
+    <button class="add" onclick="print()">ADD TO CART</button>
+</div>
+<br>
+<br>
+ 
+<br>
+<br>
+
+<form action="index.php" method="post">
+<label for="name">Name</label>
+<input type="text" id="name" name="nam" required><br><br>
+<label for="number" > Your Number</label>
+<input type="text"  id="number" name="num" required>
+<br>
+<br>
+<label for="address" > Your address</label>
+<input type="text"  id="address" name="add" required><br><br>
+<div class="inputBox">
+    <label>email</label>
+    <input type="email" required>
+</div><br><br>
+
+<div class="inputBox">
+    <label>message</label>
+    <textarea required name="" id="" cols="30" rows="10"></textarea>
+</div><br><br>
+<div>
+<input type="submit" value="send message" class="btn">
+<button class="botton" name="bt">submit</button>
+</div>
+</form>
+<script src="Main.js"></script>
+<script> window.alert("welcome to resturant page");
+
+
+</script>
+</body>
+</html>
